@@ -195,7 +195,7 @@
       "garden",
       "annual"
     ],
-    "image": "PlantImage/Sunflower.jpg"
+    "image": "PlantImage/SunFlower.jpg"
   },
   {
     "id": 8,
@@ -641,7 +641,7 @@
       "edible",
       "rhizome"
     ],
-    "image": "PlantImage/Ginger.jpg"
+    "image": "PlantImage/ginger.jpg"
   },
   {
     "id": 24,
@@ -695,7 +695,7 @@
       "philippine",
       "timber"
     ],
-    "image": "PlantImage/NarraTree.jpg"
+    "image": "PlantImage/Narratree.jpg"
   },
   {
     "id": 26,
@@ -777,7 +777,7 @@
       "drought-tolerant",
       "beginner-friendly"
     ],
-    "image": "PlantImage/ZZPlant.jpg"
+    "image": "PlantImage/ZzPlant.jpg"
   },
   {
     "id": 29,
@@ -973,7 +973,7 @@
       "statement",
       "ornamental"
     ],
-    "image": "PlantImage/BirdOfParadise.jpg"
+    "image": "PlantImage/BirdofParadise.jpg"
   },
   {
     "id": 36,
@@ -1056,7 +1056,7 @@
       "hanging",
       "unique"
     ],
-    "image": "PlantImage/StringOfPearls.jpg"
+    "image": "PlantImage/StringofPearls.jpg"
   },
   {
     "id": 39,
@@ -1664,6 +1664,6 @@
       "flowering",
       "outdoor"
     ],
-    "image": "PlantImage/CrownOfThorns.jpg"
+    "image": "PlantImage/CrownofThorns.jpg"
   }
 ]
