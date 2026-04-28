@@ -1,0 +1,1669 @@
+[
+  {
+    "id": 1,
+    "name": "Rose",
+    "scientific": "Rosa",
+    "category": "Flowering",
+    "description": "One of the most beloved flowering plants in the world, known for its beautiful blooms and fragrance.",
+    "care": {
+      "water": "Water deeply twice a week, allowing soil to dry slightly between waterings.",
+      "sunlight": "Full sun, at least 6 hours of direct sunlight daily.",
+      "soil": "Well-draining, loamy soil with pH 6.0–6.5.",
+      "fertilizer": "Feed every 4–6 weeks during growing season with a balanced fertilizer.",
+      "temperature": "15–27°C (59–81°F)"
+    },
+    "location": "Tropical / Subtropical",
+    "climate": [
+      "Tropical",
+      "Subtropical",
+      "Temperate"
+    ],
+    "difficulty": "Moderate",
+    "emoji": "🌹",
+    "tags": [
+      "flowering",
+      "fragrant",
+      "garden",
+      "ornamental"
+    ],
+    "image": "PlantImage/Rose.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Snake Plant",
+    "scientific": "Sansevieria trifasciata",
+    "category": "Succulent",
+    "description": "A hardy, air-purifying houseplant with striking upright leaves. Nearly indestructible and perfect for beginners.",
+    "care": {
+      "water": "Water every 2–6 weeks, depending on light. Allow soil to dry completely.",
+      "sunlight": "Tolerates low light to bright indirect sunlight.",
+      "soil": "Well-draining sandy or cactus mix soil.",
+      "fertilizer": "Feed monthly during spring and summer with diluted fertilizer.",
+      "temperature": "15–29°C (60–85°F)"
+    },
+    "location": "Indoor / Low Light",
+    "climate": [
+      "Tropical",
+      "Subtropical"
+    ],
+    "difficulty": "Easy",
+    "emoji": "🪴",
+    "tags": [
+      "indoor",
+      "air-purifying",
+      "low-maintenance",
+      "succulent"
+    ],
+    "image": "PlantImage/SnakePlant.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Mango Tree",
+    "scientific": "Mangifera indica",
+    "category": "Fruit Tree",
+    "description": "A tropical fruit tree prized for its sweet, juicy fruits. One of the most cultivated fruits in the tropics.",
+    "care": {
+      "water": "Water deeply once or twice a week when young; mature trees need less frequent watering.",
+      "sunlight": "Full sun, minimum 8 hours daily.",
+      "soil": "Well-draining, sandy loam soil.",
+      "fertilizer": "Apply balanced fertilizer 3 times a year.",
+      "temperature": "24–27°C (75–80°F)"
+    },
+    "location": "Tropical Outdoor",
+    "climate": [
+      "Tropical"
+    ],
+    "difficulty": "Moderate",
+    "emoji": "🥭",
+    "tags": [
+      "fruit",
+      "tropical",
+      "tree",
+      "edible"
+    ],
+    "image": "PlantImage/MangoTree.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Money Plant",
+    "scientific": "Epipremnum aureum",
+    "category": "Vine",
+    "description": "A popular trailing houseplant believed to bring good luck and fortune. Extremely easy to grow.",
+    "care": {
+      "water": "Water when the top inch of soil is dry, typically every 1–2 weeks.",
+      "sunlight": "Bright indirect light; can tolerate low light.",
+      "soil": "Well-draining potting mix.",
+      "fertilizer": "Monthly feeding during growing season.",
+      "temperature": "18–29°C (65–85°F)"
+    },
+    "location": "Indoor",
+    "climate": [
+      "Tropical",
+      "Subtropical"
+    ],
+    "difficulty": "Easy",
+    "emoji": "🍃",
+    "tags": [
+      "indoor",
+      "trailing",
+      "low-maintenance",
+      "lucky"
+    ],
+    "image": "PlantImage/MoneyPlant.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Bamboo",
+    "scientific": "Bambusoideae",
+    "category": "Grass",
+    "description": "One of the fastest-growing plants on Earth. Used for construction, food, and decoration.",
+    "care": {
+      "water": "Water deeply 2–3 times per week when establishing; once weekly when mature.",
+      "sunlight": "Full sun to partial shade.",
+      "soil": "Loamy, well-draining soil.",
+      "fertilizer": "Apply nitrogen-rich fertilizer in spring and summer.",
+      "temperature": "18–35°C (65–95°F)"
+    },
+    "location": "Tropical / Subtropical Outdoor",
+    "climate": [
+      "Tropical",
+      "Subtropical",
+      "Temperate"
+    ],
+    "difficulty": "Easy",
+    "emoji": "🎋",
+    "tags": [
+      "fast-growing",
+      "ornamental",
+      "sustainable",
+      "grass"
+    ],
+    "image": "PlantImage/BambooTree.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Aloe Vera",
+    "scientific": "Aloe barbadensis miller",
+    "category": "Succulent",
+    "description": "A medicinal succulent known for its soothing gel used to treat burns and skin irritations.",
+    "care": {
+      "water": "Water every 3 weeks in summer, every 6–8 weeks in winter.",
+      "sunlight": "Bright indirect sunlight; can handle direct sun if acclimated.",
+      "soil": "Sandy, well-draining cactus or succulent mix.",
+      "fertilizer": "Once a year in spring with a succulent fertilizer.",
+      "temperature": "13–27°C (55–80°F)"
+    },
+    "location": "Indoor / Sunny Window",
+    "climate": [
+      "Tropical",
+      "Subtropical",
+      "Arid"
+    ],
+    "difficulty": "Easy",
+    "emoji": "🌵",
+    "tags": [
+      "medicinal",
+      "succulent",
+      "indoor",
+      "low-maintenance"
+    ],
+    "image": "PlantImage/AloeVera.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Sunflower",
+    "scientific": "Helianthus annuus",
+    "category": "Flowering",
+    "description": "Iconic bright yellow flowers that track the sun. Grows tall and produces edible seeds.",
+    "care": {
+      "water": "Water at the base once a week; more during hot summer months.",
+      "sunlight": "Full sun, at least 6–8 hours daily.",
+      "soil": "Well-draining, slightly acidic to neutral soil.",
+      "fertilizer": "Light feeding; too much nitrogen causes leafy growth over flowers.",
+      "temperature": "21–26°C (70–78°F)"
+    },
+    "location": "Outdoor Garden",
+    "climate": [
+      "Temperate",
+      "Subtropical"
+    ],
+    "difficulty": "Easy",
+    "emoji": "🌻",
+    "tags": [
+      "flowering",
+      "edible-seeds",
+      "garden",
+      "annual"
+    ],
+    "image": "PlantImage/Sunflower.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Coconut Palm",
+    "scientific": "Cocos nucifera",
+    "category": "Palm Tree",
+    "description": "The tree of life in tropical regions. Provides food, water, oil, and building materials.",
+    "care": {
+      "water": "Water regularly; requires high humidity and well-distributed rainfall.",
+      "sunlight": "Full sun, at least 6 hours daily.",
+      "soil": "Sandy, well-draining soil near coastal areas.",
+      "fertilizer": "Apply slow-release fertilizer 3–4 times annually.",
+      "temperature": "27–35°C (80–95°F)"
+    },
+    "location": "Tropical Coastal",
+    "climate": [
+      "Tropical"
+    ],
+    "difficulty": "Moderate",
+    "emoji": "🌴",
+    "tags": [
+      "fruit",
+      "tropical",
+      "palm",
+      "coastal",
+      "edible"
+    ],
+    "image": "PlantImage/CoconutPalm.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Peace Lily",
+    "scientific": "Spathiphyllum",
+    "category": "Flowering",
+    "description": "Elegant white-blooming houseplant known for air purification and low-light tolerance.",
+    "care": {
+      "water": "Keep soil moist but not waterlogged; water when leaves droop slightly.",
+      "sunlight": "Low to medium indirect light.",
+      "soil": "Rich, well-draining potting mix.",
+      "fertilizer": "Feed monthly in spring and summer.",
+      "temperature": "18–27°C (65–80°F)"
+    },
+    "location": "Indoor",
+    "climate": [
+      "Tropical",
+      "Subtropical"
+    ],
+    "difficulty": "Easy",
+    "emoji": "🌸",
+    "tags": [
+      "indoor",
+      "air-purifying",
+      "flowering",
+      "shade-tolerant"
+    ],
+    "image": "PlantImage/PeaceLily.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Orchid",
+    "scientific": "Orchidaceae",
+    "category": "Flowering",
+    "description": "One of the largest flowering plant families. Known for exotic, long-lasting blooms.",
+    "care": {
+      "water": "Water every 7–10 days; allow roots to dry between waterings.",
+      "sunlight": "Bright indirect light; avoid direct afternoon sun.",
+      "soil": "Orchid bark mix with good drainage.",
+      "fertilizer": "Diluted orchid fertilizer weekly during growing season.",
+      "temperature": "18–24°C (65–75°F)"
+    },
+    "location": "Indoor / Humid",
+    "climate": [
+      "Tropical",
+      "Subtropical"
+    ],
+    "difficulty": "Challenging",
+    "emoji": "🪷",
+    "tags": [
+      "flowering",
+      "exotic",
+      "indoor",
+      "epiphyte"
+    ],
+    "image": "PlantImage/Orchid.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Banana Plant",
+    "scientific": "Musa",
+    "category": "Fruit Plant",
+    "description": "A fast-growing tropical plant bearing clusters of sweet fruits. Also used ornamentally.",
+    "care": {
+      "water": "Water deeply and regularly; needs consistent moisture.",
+      "sunlight": "Full sun, 6+ hours daily.",
+      "soil": "Rich, well-draining soil with high organic matter.",
+      "fertilizer": "Heavy feeder; fertilize monthly with balanced fertilizer.",
+      "temperature": "26–30°C (79–86°F)"
+    },
+    "location": "Tropical Outdoor",
+    "climate": [
+      "Tropical"
+    ],
+    "difficulty": "Easy",
+    "emoji": "🍌",
+    "tags": [
+      "fruit",
+      "tropical",
+      "fast-growing",
+      "edible"
+    ],
+    "image": "PlantImage/BananaPlant.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Fern",
+    "scientific": "Polypodiopsida",
+    "category": "Fern",
+    "description": "Ancient vascular plants with feathery fronds. Thrives in moist, shaded environments.",
+    "care": {
+      "water": "Keep soil consistently moist; mist leaves regularly for humidity.",
+      "sunlight": "Indirect to low light; avoid direct sun.",
+      "soil": "Rich, moist, well-draining potting mix.",
+      "fertilizer": "Feed monthly in spring and summer with diluted fertilizer.",
+      "temperature": "15–24°C (60–75°F)"
+    },
+    "location": "Indoor / Shaded Outdoor",
+    "climate": [
+      "Tropical",
+      "Subtropical",
+      "Temperate"
+    ],
+    "difficulty": "Moderate",
+    "emoji": "🌿",
+    "tags": [
+      "indoor",
+      "shade-loving",
+      "humidity-loving",
+      "fern"
+    ],
+    "image": "PlantImage/Fern.jpg"
+  },
+  {
+    "id": 13,
+    "name": "Lavender",
+    "scientific": "Lavandula",
+    "category": "Herb",
+    "description": "A fragrant herb and flowering plant prized for its calming scent and purple blooms.",
+    "care": {
+      "water": "Water once or twice a week; drought-tolerant once established.",
+      "sunlight": "Full sun, 6+ hours daily.",
+      "soil": "Sandy, alkaline, well-draining soil.",
+      "fertilizer": "Light fertilizer in spring; too much causes leafy growth.",
+      "temperature": "10–21°C (50–70°F)"
+    },
+    "location": "Mediterranean / Temperate Outdoor",
+    "climate": [
+      "Mediterranean",
+      "Temperate"
+    ],
+    "difficulty": "Moderate",
+    "emoji": "🪻",
+    "tags": [
+      "herb",
+      "fragrant",
+      "flowering",
+      "drought-tolerant"
+    ],
+    "image": "PlantImage/Lavender.jpg"
+  },
+  {
+    "id": 14,
+    "name": "Cactus",
+    "scientific": "Cactaceae",
+    "category": "Succulent",
+    "description": "Desert plants adapted to extremely dry conditions. Stores water in thick stems.",
+    "care": {
+      "water": "Water sparingly; every 2–3 weeks in summer, once a month or less in winter.",
+      "sunlight": "Full direct sun, 4–6 hours daily.",
+      "soil": "Sandy, fast-draining cactus mix.",
+      "fertilizer": "Feed once in spring with cactus fertilizer.",
+      "temperature": "21–32°C (70–90°F)"
+    },
+    "location": "Arid / Desert Outdoor or Sunny Indoor",
+    "climate": [
+      "Arid",
+      "Desert"
+    ],
+    "difficulty": "Easy",
+    "emoji": "🌵",
+    "tags": [
+      "succulent",
+      "drought-tolerant",
+      "desert",
+      "low-maintenance"
+    ],
+    "image": "PlantImage/Cactus.jpg"
+  },
+  {
+    "id": 15,
+    "name": "Jade Plant",
+    "scientific": "Crassula ovata",
+    "category": "Succulent",
+    "description": "A popular succulent houseplant resembling a miniature tree. Associated with good luck.",
+    "care": {
+      "water": "Water thoroughly, then allow soil to dry completely between waterings.",
+      "sunlight": "Bright direct or indirect sunlight, 4+ hours daily.",
+      "soil": "Well-draining succulent or cactus mix.",
+      "fertilizer": "Feed 2–3 times a year with balanced fertilizer.",
+      "temperature": "18–24°C (65–75°F)"
+    },
+    "location": "Indoor / Sunny Window",
+    "climate": [
+      "Subtropical",
+      "Mediterranean"
+    ],
+    "difficulty": "Easy",
+    "emoji": "🌱",
+    "tags": [
+      "succulent",
+      "indoor",
+      "low-maintenance",
+      "lucky"
+    ],
+    "image": "PlantImage/JadePlant.jpg"
+  },
+  {
+    "id": 16,
+    "name": "Monstera",
+    "scientific": "Monstera deliciosa",
+    "category": "Tropical Foliage",
+    "description": "Iconic tropical plant with large, split leaves. A design favorite for modern interiors.",
+    "care": {
+      "water": "Water when top 2 inches of soil are dry, typically every 1–2 weeks.",
+      "sunlight": "Bright indirect light.",
+      "soil": "Well-draining, rich potting mix.",
+      "fertilizer": "Monthly fertilizer during spring and summer.",
+      "temperature": "18–30°C (65–85°F)"
+    },
+    "location": "Indoor",
+    "climate": [
+      "Tropical"
+    ],
+    "difficulty": "Easy",
+    "emoji": "🪴",
+    "tags": [
+      "tropical",
+      "indoor",
+      "statement-plant",
+      "foliage"
+    ],
+    "image": "PlantImage/Monstera.jpg"
+  },
+  {
+    "id": 17,
+    "name": "Basil",
+    "scientific": "Ocimum basilicum",
+    "category": "Herb",
+    "description": "An aromatic culinary herb essential in many cuisines worldwide.",
+    "care": {
+      "water": "Water regularly, keeping soil moist but not soggy.",
+      "sunlight": "Full sun, 6–8 hours daily.",
+      "soil": "Rich, well-draining potting mix.",
+      "fertilizer": "Feed every 2–3 weeks with nitrogen-rich fertilizer.",
+      "temperature": "21–29°C (70–85°F)"
+    },
+    "location": "Outdoor Garden / Sunny Window",
+    "climate": [
+      "Tropical",
+      "Subtropical",
+      "Temperate"
+    ],
+    "difficulty": "Easy",
+    "emoji": "🌿",
+    "tags": [
+      "herb",
+      "culinary",
+      "edible",
+      "aromatic"
+    ],
+    "image": "PlantImage/Basil.jpg"
+  },
+  {
+    "id": 18,
+    "name": "Cherry Blossom",
+    "scientific": "Prunus serrulata",
+    "category": "Tree",
+    "description": "Japan's iconic flowering tree producing spectacular pink blooms in spring.",
+    "care": {
+      "water": "Water deeply once a week; more frequently in hot weather.",
+      "sunlight": "Full sun to partial shade.",
+      "soil": "Well-draining, slightly acidic soil.",
+      "fertilizer": "Apply balanced fertilizer in early spring before blooming.",
+      "temperature": "15–23°C (60–75°F)"
+    },
+    "location": "Temperate Outdoor",
+    "climate": [
+      "Temperate"
+    ],
+    "difficulty": "Moderate",
+    "emoji": "🌸",
+    "tags": [
+      "flowering",
+      "tree",
+      "ornamental",
+      "seasonal"
+    ],
+    "image": "PlantImage/CherryBlossom.jpg"
+  },
+  {
+    "id": 19,
+    "name": "Pothos",
+    "scientific": "Epipremnum aureum",
+    "category": "Vine",
+    "description": "A resilient trailing houseplant that thrives in almost any condition.",
+    "care": {
+      "water": "Allow soil to dry between waterings, every 1–2 weeks.",
+      "sunlight": "Low to bright indirect light.",
+      "soil": "Any well-draining potting mix.",
+      "fertilizer": "Monthly in spring and summer.",
+      "temperature": "16–30°C (60–85°F)"
+    },
+    "location": "Indoor",
+    "climate": [
+      "Tropical",
+      "Subtropical"
+    ],
+    "difficulty": "Easy",
+    "emoji": "🍃",
+    "tags": [
+      "indoor",
+      "trailing",
+      "beginner-friendly",
+      "vine"
+    ],
+    "image": "PlantImage/Pothos.jpg"
+  },
+  {
+    "id": 20,
+    "name": "Papaya",
+    "scientific": "Carica papaya",
+    "category": "Fruit Tree",
+    "description": "A fast-growing tropical fruit tree bearing large, sweet orange fruits.",
+    "care": {
+      "water": "Water regularly; drought-sensitive but avoid waterlogging.",
+      "sunlight": "Full sun, 6+ hours daily.",
+      "soil": "Rich, well-draining, sandy loam.",
+      "fertilizer": "Monthly balanced fertilizer; high in nitrogen.",
+      "temperature": "21–33°C (70–91°F)"
+    },
+    "location": "Tropical Outdoor",
+    "climate": [
+      "Tropical"
+    ],
+    "difficulty": "Easy",
+    "emoji": "🍈",
+    "tags": [
+      "fruit",
+      "tropical",
+      "fast-growing",
+      "edible"
+    ],
+    "image": "PlantImage/PapayaTree.jpg"
+  },
+  {
+    "id": 21,
+    "name": "Spider Plant",
+    "scientific": "Chlorophytum comosum",
+    "category": "Foliage",
+    "description": "A cheerful, air-purifying houseplant producing cascading spiderettes.",
+    "care": {
+      "water": "Water moderately; allow soil to dry slightly between waterings.",
+      "sunlight": "Indirect bright light; tolerates low light.",
+      "soil": "Well-draining, loamy potting mix.",
+      "fertilizer": "Monthly in spring and summer.",
+      "temperature": "13–27°C (55–80°F)"
+    },
+    "location": "Indoor",
+    "climate": [
+      "Tropical",
+      "Subtropical",
+      "Temperate"
+    ],
+    "difficulty": "Easy",
+    "emoji": "🌾",
+    "tags": [
+      "indoor",
+      "air-purifying",
+      "hanging",
+      "beginner-friendly"
+    ],
+    "image": "PlantImage/SpiderPlant.jpg"
+  },
+  {
+    "id": 22,
+    "name": "Hibiscus",
+    "scientific": "Hibiscus rosa-sinensis",
+    "category": "Flowering",
+    "description": "A tropical flowering shrub with large, vibrant blooms. The national flower of Malaysia.",
+    "care": {
+      "water": "Water deeply and regularly; 1 inch per week.",
+      "sunlight": "Full sun, 6+ hours daily.",
+      "soil": "Moist, well-draining, slightly acidic soil.",
+      "fertilizer": "Feed every 2 weeks in growing season with high-potassium fertilizer.",
+      "temperature": "16–32°C (60–90°F)"
+    },
+    "location": "Tropical / Subtropical Outdoor",
+    "climate": [
+      "Tropical",
+      "Subtropical"
+    ],
+    "difficulty": "Moderate",
+    "emoji": "🌺",
+    "tags": [
+      "flowering",
+      "tropical",
+      "ornamental",
+      "shrub"
+    ],
+    "image": "PlantImage/Hibiscus.jpg"
+  },
+  {
+    "id": 23,
+    "name": "Ginger",
+    "scientific": "Zingiber officinale",
+    "category": "Herb",
+    "description": "A tropical rhizome plant with culinary and medicinal uses.",
+    "care": {
+      "water": "Keep soil consistently moist; water 2–3 times a week.",
+      "sunlight": "Partial shade to dappled sunlight.",
+      "soil": "Rich, loamy, well-draining soil.",
+      "fertilizer": "Monthly balanced fertilizer during growing season.",
+      "temperature": "24–30°C (75–86°F)"
+    },
+    "location": "Tropical Outdoor / Indoor",
+    "climate": [
+      "Tropical"
+    ],
+    "difficulty": "Moderate",
+    "emoji": "🌿",
+    "tags": [
+      "herb",
+      "medicinal",
+      "edible",
+      "rhizome"
+    ],
+    "image": "PlantImage/Ginger.jpg"
+  },
+  {
+    "id": 24,
+    "name": "Fiddle Leaf Fig",
+    "scientific": "Ficus lyrata",
+    "category": "Tree",
+    "description": "A statement indoor tree with large, violin-shaped leaves beloved in interior design.",
+    "care": {
+      "water": "Water when top inch of soil is dry; avoid overwatering.",
+      "sunlight": "Bright indirect light; avoid direct afternoon sun.",
+      "soil": "Well-draining, fertile potting mix.",
+      "fertilizer": "Monthly during spring and summer.",
+      "temperature": "18–30°C (65–85°F)"
+    },
+    "location": "Indoor",
+    "climate": [
+      "Tropical"
+    ],
+    "difficulty": "Challenging",
+    "emoji": "🌳",
+    "tags": [
+      "indoor",
+      "statement",
+      "tree",
+      "tropical"
+    ],
+    "image": "PlantImage/FiddleLeafFig.jpg"
+  },
+  {
+    "id": 25,
+    "name": "Narra Tree",
+    "scientific": "Pterocarpus indicus",
+    "category": "Tree",
+    "description": "The national tree of the Philippines, known for its hard wood and yellow flowers.",
+    "care": {
+      "water": "Moderate watering; drought-tolerant once established.",
+      "sunlight": "Full sun.",
+      "soil": "Well-draining loamy soil.",
+      "fertilizer": "Light feeding; generally low-maintenance.",
+      "temperature": "24–32°C (75–90°F)"
+    },
+    "location": "Tropical Outdoor",
+    "climate": [
+      "Tropical"
+    ],
+    "difficulty": "Easy",
+    "emoji": "🌳",
+    "tags": [
+      "tree",
+      "native",
+      "philippine",
+      "timber"
+    ],
+    "image": "PlantImage/NarraTree.jpg"
+  },
+  {
+    "id": 26,
+    "name": "Sampaguita",
+    "scientific": "Jasminum sambac",
+    "category": "Flowering",
+    "description": "The national flower of the Philippines. Small white flowers with an intensely sweet fragrance.",
+    "care": {
+      "water": "Water regularly to keep soil moist.",
+      "sunlight": "Full sun to partial shade.",
+      "soil": "Well-draining loamy soil.",
+      "fertilizer": "Monthly feeding with balanced fertilizer.",
+      "temperature": "20–30°C (68–86°F)"
+    },
+    "location": "Tropical Outdoor / Indoor",
+    "climate": [
+      "Tropical"
+    ],
+    "difficulty": "Easy",
+    "emoji": "🌼",
+    "tags": [
+      "flowering",
+      "fragrant",
+      "philippine",
+      "ornamental"
+    ],
+    "image": "PlantImage/Sampaguita.jpg"
+  },
+  {
+    "id": 27,
+    "name": "Acacia",
+    "scientific": "Acacia mangium",
+    "category": "Tree",
+    "description": "A fast-growing leguminous tree widely used in reforestation and timber production.",
+    "care": {
+      "water": "Drought-tolerant; water during establishment.",
+      "sunlight": "Full sun.",
+      "soil": "Adaptable to a wide range of soils including poor soils.",
+      "fertilizer": "Minimal; nitrogen-fixing roots reduce need.",
+      "temperature": "20–32°C (68–90°F)"
+    },
+    "location": "Tropical Outdoor",
+    "climate": [
+      "Tropical"
+    ],
+    "difficulty": "Easy",
+    "emoji": "🌲",
+    "tags": [
+      "tree",
+      "reforestation",
+      "fast-growing",
+      "timber"
+    ],
+    "image": "PlantImage/Acacia.jpg"
+  },
+  {
+    "id": 28,
+    "name": "ZZ Plant",
+    "scientific": "Zamioculcas zamiifolia",
+    "category": "Foliage",
+    "description": "A virtually indestructible houseplant with glossy, waxy leaves. Handles neglect well.",
+    "care": {
+      "water": "Water every 2–3 weeks; very drought-tolerant.",
+      "sunlight": "Low to bright indirect light.",
+      "soil": "Well-draining potting mix.",
+      "fertilizer": "Feed 2–3 times a year.",
+      "temperature": "15–26°C (60–79°F)"
+    },
+    "location": "Indoor",
+    "climate": [
+      "Tropical",
+      "Subtropical"
+    ],
+    "difficulty": "Easy",
+    "emoji": "🪴",
+    "tags": [
+      "indoor",
+      "low-maintenance",
+      "drought-tolerant",
+      "beginner-friendly"
+    ],
+    "image": "PlantImage/ZZPlant.jpg"
+  },
+  {
+    "id": 29,
+    "name": "Tulip",
+    "scientific": "Tulipa",
+    "category": "Flowering",
+    "description": "Elegant cup-shaped flowers blooming in spring, available in virtually every color.",
+    "care": {
+      "water": "Moderate watering; allow soil to dry between waterings.",
+      "sunlight": "Full sun to partial shade.",
+      "soil": "Well-draining, sandy or loamy soil.",
+      "fertilizer": "Apply bulb fertilizer at planting and in early spring.",
+      "temperature": "8–18°C (46–65°F)"
+    },
+    "location": "Temperate Outdoor",
+    "climate": [
+      "Temperate",
+      "Cold"
+    ],
+    "difficulty": "Moderate",
+    "emoji": "🌷",
+    "tags": [
+      "flowering",
+      "bulb",
+      "seasonal",
+      "temperate"
+    ],
+    "image": "PlantImage/Tulip.jpg"
+  },
+  {
+    "id": 30,
+    "name": "Mint",
+    "scientific": "Mentha",
+    "category": "Herb",
+    "description": "A fast-spreading aromatic herb used in cooking, beverages, and medicine.",
+    "care": {
+      "water": "Keep soil consistently moist; water every 1–2 days.",
+      "sunlight": "Partial to full sun.",
+      "soil": "Rich, moist, slightly acidic soil.",
+      "fertilizer": "Monthly with balanced fertilizer.",
+      "temperature": "18–22°C (65–72°F)"
+    },
+    "location": "Outdoor Garden / Indoor",
+    "climate": [
+      "Temperate",
+      "Subtropical"
+    ],
+    "difficulty": "Easy",
+    "emoji": "🌿",
+    "tags": [
+      "herb",
+      "culinary",
+      "aromatic",
+      "medicinal"
+    ],
+    "image": "PlantImage/Mint.jpg"
+  },
+  {
+    "id": 31,
+    "name": "Calamondin",
+    "scientific": "Citrofortunella microcarpa",
+    "category": "Fruit Tree",
+    "description": "A small citrus tree popular in the Philippines. Sour fruits used in local cuisine and beverages.",
+    "care": {
+      "water": "Water regularly; keep soil moist but well-drained.",
+      "sunlight": "Full sun, 6–8 hours daily.",
+      "soil": "Well-draining, slightly acidic soil.",
+      "fertilizer": "Feed monthly with citrus fertilizer.",
+      "temperature": "18–30°C (65–86°F)"
+    },
+    "location": "Tropical Outdoor / Container",
+    "climate": [
+      "Tropical",
+      "Subtropical"
+    ],
+    "difficulty": "Moderate",
+    "emoji": "🍊",
+    "tags": [
+      "fruit",
+      "citrus",
+      "philippine",
+      "edible"
+    ],
+    "image": "PlantImage/Calamondin.jpg"
+  },
+  {
+    "id": 32,
+    "name": "Lucky Bamboo",
+    "scientific": "Dracaena sanderiana",
+    "category": "Foliage",
+    "description": "A popular good-luck plant often grown in water or pebbles. Not true bamboo.",
+    "care": {
+      "water": "Change water every 7–10 days if grown in water; keep soil moist if in soil.",
+      "sunlight": "Low to moderate indirect light.",
+      "soil": "Well-draining potting mix or water with pebbles.",
+      "fertilizer": "Diluted liquid fertilizer monthly.",
+      "temperature": "18–32°C (65–90°F)"
+    },
+    "location": "Indoor",
+    "climate": [
+      "Tropical",
+      "Subtropical"
+    ],
+    "difficulty": "Easy",
+    "emoji": "🎍",
+    "tags": [
+      "indoor",
+      "lucky",
+      "water-growing",
+      "feng-shui"
+    ],
+    "image": "PlantImage/LuckyBamboo.jpg"
+  },
+  {
+    "id": 33,
+    "name": "Bougainvillea",
+    "scientific": "Bougainvillea spectabilis",
+    "category": "Flowering",
+    "description": "A vibrant tropical climbing plant with brilliant papery bracts in magenta, purple, and orange.",
+    "care": {
+      "water": "Drought-tolerant; water deeply then allow to dry.",
+      "sunlight": "Full sun, 5+ hours daily.",
+      "soil": "Well-draining, slightly acidic soil.",
+      "fertilizer": "Monthly with high-phosphorus fertilizer to encourage blooming.",
+      "temperature": "18–30°C (65–86°F)"
+    },
+    "location": "Tropical / Subtropical Outdoor",
+    "climate": [
+      "Tropical",
+      "Subtropical"
+    ],
+    "difficulty": "Easy",
+    "emoji": "🌺",
+    "tags": [
+      "flowering",
+      "climbing",
+      "tropical",
+      "drought-tolerant"
+    ],
+    "image": "PlantImage/Bougainvillea.jpg"
+  },
+  {
+    "id": 34,
+    "name": "Tomato",
+    "scientific": "Solanum lycopersicum",
+    "category": "Vegetable",
+    "description": "A widely cultivated fruiting vegetable plant. A staple in gardens and kitchens worldwide.",
+    "care": {
+      "water": "Water deeply 1–2 inches per week; consistent moisture prevents cracking.",
+      "sunlight": "Full sun, 6–8 hours daily.",
+      "soil": "Rich, well-draining, slightly acidic soil.",
+      "fertilizer": "Feed every 2 weeks with tomato-specific fertilizer.",
+      "temperature": "21–27°C (70–80°F)"
+    },
+    "location": "Outdoor Garden / Container",
+    "climate": [
+      "Temperate",
+      "Subtropical"
+    ],
+    "difficulty": "Moderate",
+    "emoji": "🍅",
+    "tags": [
+      "vegetable",
+      "edible",
+      "garden",
+      "annual"
+    ],
+    "image": "PlantImage/Tomato.jpg"
+  },
+  {
+    "id": 35,
+    "name": "Bird of Paradise",
+    "scientific": "Strelitzia reginae",
+    "category": "Flowering",
+    "description": "A dramatic tropical plant with bold orange and blue flowers resembling a bird in flight.",
+    "care": {
+      "water": "Water every 1–2 weeks; allow top half of soil to dry.",
+      "sunlight": "Bright direct or indirect light.",
+      "soil": "Rich, well-draining potting mix.",
+      "fertilizer": "Monthly during spring and summer.",
+      "temperature": "18–30°C (65–86°F)"
+    },
+    "location": "Indoor / Tropical Outdoor",
+    "climate": [
+      "Tropical",
+      "Subtropical"
+    ],
+    "difficulty": "Moderate",
+    "emoji": "🌸",
+    "tags": [
+      "flowering",
+      "tropical",
+      "statement",
+      "ornamental"
+    ],
+    "image": "PlantImage/BirdOfParadise.jpg"
+  },
+  {
+    "id": 36,
+    "name": "Rubber Plant",
+    "scientific": "Ficus elastica",
+    "category": "Tree",
+    "description": "A bold indoor tree with large, waxy leaves in dark green or burgundy.",
+    "care": {
+      "water": "Water every 1–2 weeks; allow soil to dry between waterings.",
+      "sunlight": "Bright indirect light.",
+      "soil": "Well-draining potting mix.",
+      "fertilizer": "Monthly in growing season.",
+      "temperature": "15–27°C (60–80°F)"
+    },
+    "location": "Indoor",
+    "climate": [
+      "Tropical"
+    ],
+    "difficulty": "Easy",
+    "emoji": "🌳",
+    "tags": [
+      "indoor",
+      "foliage",
+      "tree",
+      "statement"
+    ],
+    "image": "PlantImage/RubberPlant.jpg"
+  },
+  {
+    "id": 37,
+    "name": "Calamansi",
+    "scientific": "Citrus x microcarpa",
+    "category": "Fruit Tree",
+    "description": "A small citrus fruit native to the Philippines, widely used as a condiment and souring agent.",
+    "care": {
+      "water": "Regular watering; needs consistent moisture.",
+      "sunlight": "Full sun.",
+      "soil": "Loamy, well-draining slightly acidic soil.",
+      "fertilizer": "Monthly citrus fertilizer.",
+      "temperature": "20–32°C (68–90°F)"
+    },
+    "location": "Tropical Outdoor",
+    "climate": [
+      "Tropical"
+    ],
+    "difficulty": "Easy",
+    "emoji": "🍋",
+    "tags": [
+      "fruit",
+      "philippine",
+      "citrus",
+      "edible",
+      "culinary"
+    ],
+    "image": "PlantImage/Calamondin.jpg"
+  },
+  {
+    "id": 38,
+    "name": "String of Pearls",
+    "scientific": "Senecio rowleyanus",
+    "category": "Succulent",
+    "description": "A unique trailing succulent with tiny spherical leaves resembling a string of beads.",
+    "care": {
+      "water": "Water sparingly every 2–3 weeks; very drought-tolerant.",
+      "sunlight": "Bright indirect light.",
+      "soil": "Fast-draining cactus or succulent mix.",
+      "fertilizer": "Once in spring with diluted succulent fertilizer.",
+      "temperature": "21–26°C (70–80°F)"
+    },
+    "location": "Indoor / Hanging Basket",
+    "climate": [
+      "Subtropical",
+      "Mediterranean"
+    ],
+    "difficulty": "Moderate",
+    "emoji": "🌵",
+    "tags": [
+      "succulent",
+      "trailing",
+      "hanging",
+      "unique"
+    ],
+    "image": "PlantImage/StringOfPearls.jpg"
+  },
+  {
+    "id": 39,
+    "name": "Guava",
+    "scientific": "Psidium guajava",
+    "category": "Fruit Tree",
+    "description": "A tropical fruit tree producing fragrant, nutritious fruits rich in vitamin C.",
+    "care": {
+      "water": "Water regularly during dry season; drought-tolerant once established.",
+      "sunlight": "Full sun.",
+      "soil": "Well-draining, fertile loamy soil.",
+      "fertilizer": "Monthly fertilizer during growing season.",
+      "temperature": "23–28°C (73–82°F)"
+    },
+    "location": "Tropical Outdoor",
+    "climate": [
+      "Tropical",
+      "Subtropical"
+    ],
+    "difficulty": "Easy",
+    "emoji": "🍐",
+    "tags": [
+      "fruit",
+      "tropical",
+      "edible",
+      "vitamin-c"
+    ],
+    "image": "PlantImage/Guava.jpg"
+  },
+  {
+    "id": 40,
+    "name": "Pandan",
+    "scientific": "Pandanus amaryllifolius",
+    "category": "Herb",
+    "description": "A tropical plant with fragrant leaves used extensively in Southeast Asian cooking.",
+    "care": {
+      "water": "Keep consistently moist; water 2–3 times a week.",
+      "sunlight": "Partial shade to bright indirect light.",
+      "soil": "Moist, well-draining loamy soil.",
+      "fertilizer": "Monthly with balanced fertilizer.",
+      "temperature": "25–35°C (77–95°F)"
+    },
+    "location": "Tropical Outdoor / Indoor",
+    "climate": [
+      "Tropical"
+    ],
+    "difficulty": "Easy",
+    "emoji": "🌾",
+    "tags": [
+      "herb",
+      "culinary",
+      "philippine",
+      "aromatic",
+      "edible"
+    ],
+    "image": "PlantImage/Pandan.jpg"
+  },
+  {
+    "id": 41,
+    "name": "Anthurium",
+    "scientific": "Anthurium andraeanum",
+    "category": "Flowering",
+    "description": "A tropical plant with glossy, heart-shaped red spathes. Long-lasting and dramatic.",
+    "care": {
+      "water": "Water every 1–2 weeks; keep soil slightly moist.",
+      "sunlight": "Bright indirect light.",
+      "soil": "Chunky, well-draining orchid or aroid mix.",
+      "fertilizer": "Monthly with phosphorus-rich fertilizer.",
+      "temperature": "18–27°C (65–80°F)"
+    },
+    "location": "Indoor",
+    "climate": [
+      "Tropical"
+    ],
+    "difficulty": "Moderate",
+    "emoji": "🌺",
+    "tags": [
+      "flowering",
+      "indoor",
+      "tropical",
+      "air-purifying"
+    ],
+    "image": "PlantImage/Anthurium.jpg"
+  },
+  {
+    "id": 42,
+    "name": "Dracaena",
+    "scientific": "Dracaena marginata",
+    "category": "Foliage",
+    "description": "A dramatic, low-maintenance plant with spiky leaves. An excellent air purifier.",
+    "care": {
+      "water": "Water every 1–2 weeks; sensitive to fluoride in tap water.",
+      "sunlight": "Indirect bright to medium light.",
+      "soil": "Well-draining potting mix.",
+      "fertilizer": "Feed monthly in spring and summer.",
+      "temperature": "18–27°C (65–80°F)"
+    },
+    "location": "Indoor",
+    "climate": [
+      "Tropical",
+      "Subtropical"
+    ],
+    "difficulty": "Easy",
+    "emoji": "🪴",
+    "tags": [
+      "indoor",
+      "air-purifying",
+      "low-maintenance",
+      "foliage"
+    ],
+    "image": "PlantImage/Dracaena.jpg"
+  },
+  {
+    "id": 43,
+    "name": "Sweet Potato Vine",
+    "scientific": "Ipomoea batatas",
+    "category": "Vegetable",
+    "description": "A nutritious tropical root crop widely grown in the Philippines.",
+    "care": {
+      "water": "Moderate watering; drought-tolerant once established.",
+      "sunlight": "Full sun.",
+      "soil": "Loose, sandy, well-draining soil.",
+      "fertilizer": "Light feeding; too much nitrogen reduces root production.",
+      "temperature": "21–32°C (70–90°F)"
+    },
+    "location": "Tropical Outdoor",
+    "climate": [
+      "Tropical",
+      "Subtropical"
+    ],
+    "difficulty": "Easy",
+    "emoji": "🍠",
+    "tags": [
+      "vegetable",
+      "edible",
+      "philippine",
+      "root-crop"
+    ],
+    "image": "PlantImage/SweetPotatoVine.jpg"
+  },
+  {
+    "id": 44,
+    "name": "Ylang-Ylang",
+    "scientific": "Cananga odorata",
+    "category": "Tree",
+    "description": "A fragrant tropical tree whose flowers are used in perfume production and aromatherapy.",
+    "care": {
+      "water": "Regular watering; moisture-loving.",
+      "sunlight": "Full sun to partial shade.",
+      "soil": "Well-draining, fertile soil.",
+      "fertilizer": "Monthly during growing season.",
+      "temperature": "22–30°C (72–86°F)"
+    },
+    "location": "Tropical Outdoor",
+    "climate": [
+      "Tropical"
+    ],
+    "difficulty": "Moderate",
+    "emoji": "🌼",
+    "tags": [
+      "tree",
+      "fragrant",
+      "philippine",
+      "aromatic"
+    ],
+    "image": "PlantImage/Ylang-Ylang.jpg"
+  },
+  {
+    "id": 45,
+    "name": "Kalanchoe",
+    "scientific": "Kalanchoe blossfeldiana",
+    "category": "Succulent",
+    "description": "A cheerful flowering succulent with clusters of small, long-lasting blooms.",
+    "care": {
+      "water": "Allow soil to dry between waterings; every 2–3 weeks.",
+      "sunlight": "Bright indirect to direct light.",
+      "soil": "Well-draining succulent or cactus mix.",
+      "fertilizer": "Monthly during bloom period with low-nitrogen fertilizer.",
+      "temperature": "15–27°C (60–80°F)"
+    },
+    "location": "Indoor / Outdoor",
+    "climate": [
+      "Tropical",
+      "Subtropical"
+    ],
+    "difficulty": "Easy",
+    "emoji": "🌼",
+    "tags": [
+      "succulent",
+      "flowering",
+      "indoor",
+      "colorful"
+    ],
+    "image": "PlantImage/Kalanchoe.jpg"
+  },
+  {
+    "id": 46,
+    "name": "Mahogany",
+    "scientific": "Swietenia macrophylla",
+    "category": "Tree",
+    "description": "A valuable timber tree native to the Americas, widely planted in the Philippines.",
+    "care": {
+      "water": "Regular watering when young; drought-tolerant once established.",
+      "sunlight": "Full sun.",
+      "soil": "Deep, well-draining loamy soil.",
+      "fertilizer": "Minimal once established.",
+      "temperature": "22–30°C (72–86°F)"
+    },
+    "location": "Tropical Outdoor",
+    "climate": [
+      "Tropical"
+    ],
+    "difficulty": "Easy",
+    "emoji": "🌲",
+    "tags": [
+      "tree",
+      "timber",
+      "shade-tree",
+      "reforestation"
+    ],
+    "image": "PlantImage/Mahogany.jpg"
+  },
+  {
+    "id": 47,
+    "name": "Venus Flytrap",
+    "scientific": "Dionaea muscipula",
+    "category": "Carnivorous",
+    "description": "A fascinating carnivorous plant that catches and digests insects and spiders.",
+    "care": {
+      "water": "Use distilled or rainwater; keep soil moist via tray method.",
+      "sunlight": "Full direct sun, 4+ hours daily.",
+      "soil": "Low-nutrient sphagnum moss or peat mix.",
+      "fertilizer": "Never fertilize; feed live insects instead.",
+      "temperature": "18–35°C (65–95°F)"
+    },
+    "location": "Indoor / Sunny Outdoor",
+    "climate": [
+      "Subtropical",
+      "Temperate"
+    ],
+    "difficulty": "Challenging",
+    "emoji": "🌱",
+    "tags": [
+      "carnivorous",
+      "unique",
+      "indoor",
+      "novelty"
+    ],
+    "image": "PlantImage/VenusFlytrap.jpg"
+  },
+  {
+    "id": 48,
+    "name": "Lipstick Plant",
+    "scientific": "Aeschynanthus radicans",
+    "category": "Flowering",
+    "description": "A tropical vine with tubular red flowers that emerge from dark tubes, resembling a lipstick.",
+    "care": {
+      "water": "Water when top inch of soil is dry; needs humidity.",
+      "sunlight": "Bright indirect light.",
+      "soil": "Well-draining potting mix with perlite.",
+      "fertilizer": "Monthly in spring and summer.",
+      "temperature": "18–30°C (65–86°F)"
+    },
+    "location": "Indoor / Hanging Basket",
+    "climate": [
+      "Tropical"
+    ],
+    "difficulty": "Moderate",
+    "emoji": "🌹",
+    "tags": [
+      "flowering",
+      "trailing",
+      "indoor",
+      "tropical"
+    ],
+    "image": "PlantImage/LipstickPlant.jpg"
+  },
+  {
+    "id": 49,
+    "name": "Pineapple Plant",
+    "scientific": "Ananas comosus",
+    "category": "Fruit Plant",
+    "description": "A tropical bromeliad producing the iconic pineapple fruit.",
+    "care": {
+      "water": "Water moderately; drought-tolerant. Fill the central cup.",
+      "sunlight": "Full sun, 6+ hours daily.",
+      "soil": "Sandy, well-draining, slightly acidic soil.",
+      "fertilizer": "Monthly during growing season.",
+      "temperature": "20–30°C (68–86°F)"
+    },
+    "location": "Tropical Outdoor / Indoor",
+    "climate": [
+      "Tropical"
+    ],
+    "difficulty": "Moderate",
+    "emoji": "🍍",
+    "tags": [
+      "fruit",
+      "tropical",
+      "bromeliad",
+      "edible"
+    ],
+    "image": "PlantImage/PineapplePlant.jpg"
+  },
+  {
+    "id": 50,
+    "name": "Caladium",
+    "scientific": "Caladium bicolor",
+    "category": "Foliage",
+    "description": "A stunning tropical plant with large, colorful heart-shaped leaves in reds, pinks, and whites.",
+    "care": {
+      "water": "Keep soil moist; water every 1–2 days.",
+      "sunlight": "Bright indirect light; direct sun burns leaves.",
+      "soil": "Rich, well-draining potting mix.",
+      "fertilizer": "Monthly during growing season.",
+      "temperature": "21–27°C (70–80°F)"
+    },
+    "location": "Indoor / Shaded Outdoor",
+    "climate": [
+      "Tropical"
+    ],
+    "difficulty": "Moderate",
+    "emoji": "🍂",
+    "tags": [
+      "foliage",
+      "tropical",
+      "colorful",
+      "ornamental"
+    ],
+    "image": "PlantImage/Caladium.jpg"
+  },
+  {
+    "id": 51,
+    "name": "Daisy",
+    "scientific": "Bellis perennis",
+    "category": "Flowering",
+    "description": "Cheerful white flowers with yellow centers. A symbol of innocence and purity.",
+    "care": {
+      "water": "Water regularly; keep soil moist but not waterlogged.",
+      "sunlight": "Full sun to partial shade.",
+      "soil": "Fertile, well-draining soil.",
+      "fertilizer": "Monthly with balanced fertilizer.",
+      "temperature": "8–18°C (46–65°F)"
+    },
+    "location": "Temperate Outdoor",
+    "climate": [
+      "Temperate"
+    ],
+    "difficulty": "Easy",
+    "emoji": "🌼",
+    "tags": [
+      "flowering",
+      "garden",
+      "annual",
+      "ornamental"
+    ],
+    "image": "PlantImage/Daisy.jpg"
+  },
+  {
+    "id": 52,
+    "name": "Traveler's Palm",
+    "scientific": "Ravenala madagascariensis",
+    "category": "Palm",
+    "description": "A dramatic architectural plant with paddle-shaped leaves arranged in a single plane like a fan.",
+    "care": {
+      "water": "Water regularly; moisture-loving.",
+      "sunlight": "Full sun.",
+      "soil": "Rich, well-draining soil.",
+      "fertilizer": "Monthly during growing season.",
+      "temperature": "21–32°C (70–90°F)"
+    },
+    "location": "Tropical Outdoor",
+    "climate": [
+      "Tropical"
+    ],
+    "difficulty": "Moderate",
+    "emoji": "🌴",
+    "tags": [
+      "tropical",
+      "ornamental",
+      "architectural",
+      "large"
+    ],
+    "image": "PlantImage/Traveler'sPalm.jpg"
+  },
+  {
+    "id": 53,
+    "name": "Rosemary",
+    "scientific": "Salvia rosmarinus",
+    "category": "Herb",
+    "description": "An aromatic woody herb used in Mediterranean cooking and as a garden ornamental.",
+    "care": {
+      "water": "Drought-tolerant; water every 1–2 weeks; avoid overwatering.",
+      "sunlight": "Full sun, 6+ hours daily.",
+      "soil": "Sandy, alkaline, well-draining soil.",
+      "fertilizer": "Light feeding; half-strength balanced fertilizer in spring.",
+      "temperature": "16–24°C (60–75°F)"
+    },
+    "location": "Mediterranean / Temperate Outdoor",
+    "climate": [
+      "Mediterranean",
+      "Temperate"
+    ],
+    "difficulty": "Easy",
+    "emoji": "🌿",
+    "tags": [
+      "herb",
+      "culinary",
+      "aromatic",
+      "drought-tolerant"
+    ],
+    "image": "PlantImage/Rosemary.jpg"
+  },
+  {
+    "id": 54,
+    "name": "Taro",
+    "scientific": "Colocasia esculenta",
+    "category": "Vegetable",
+    "description": "A tropical root vegetable with large, elephant-ear-like leaves. A staple crop in Asia.",
+    "care": {
+      "water": "Needs abundant water; grows in waterlogged or flooded conditions.",
+      "sunlight": "Partial to full shade.",
+      "soil": "Wet, loamy, rich soil.",
+      "fertilizer": "Monthly balanced fertilizer.",
+      "temperature": "21–30°C (70–86°F)"
+    },
+    "location": "Tropical Outdoor",
+    "climate": [
+      "Tropical"
+    ],
+    "difficulty": "Easy",
+    "emoji": "🍃",
+    "tags": [
+      "vegetable",
+      "root-crop",
+      "edible",
+      "philippine",
+      "tropical"
+    ],
+    "image": "PlantImage/Taro.jpg"
+  },
+  {
+    "id": 55,
+    "name": "African Violet",
+    "scientific": "Saintpaulia ionantha",
+    "category": "Flowering",
+    "description": "A compact flowering houseplant with velvety leaves and purple, pink, or white blooms.",
+    "care": {
+      "water": "Water from below; keep leaves dry to prevent spotting.",
+      "sunlight": "Bright indirect light; avoid direct sun.",
+      "soil": "Lightweight, well-draining African violet mix.",
+      "fertilizer": "Bi-weekly with African violet fertilizer.",
+      "temperature": "18–24°C (65–75°F)"
+    },
+    "location": "Indoor",
+    "climate": [
+      "Tropical",
+      "Subtropical"
+    ],
+    "difficulty": "Moderate",
+    "emoji": "🪻",
+    "tags": [
+      "flowering",
+      "indoor",
+      "compact",
+      "houseplant"
+    ],
+    "image": "PlantImage/AfricanViolet.jpg"
+  },
+  {
+    "id": 56,
+    "name": "Jackfruit Tree",
+    "scientific": "Artocarpus heterophyllus",
+    "category": "Fruit Tree",
+    "description": "The largest fruit-bearing tree, producing massive fruits. Popular in Southeast Asian cuisine.",
+    "care": {
+      "water": "Regular watering; drought-tolerant once mature.",
+      "sunlight": "Full sun.",
+      "soil": "Deep, well-draining loamy soil.",
+      "fertilizer": "Monthly balanced fertilizer when young.",
+      "temperature": "25–38°C (77–100°F)"
+    },
+    "location": "Tropical Outdoor",
+    "climate": [
+      "Tropical"
+    ],
+    "difficulty": "Easy",
+    "emoji": "🍈",
+    "tags": [
+      "fruit",
+      "tropical",
+      "tree",
+      "edible",
+      "philippine"
+    ],
+    "image": "PlantImage/JackfruitTree.jpg"
+  },
+  {
+    "id": 57,
+    "name": "Philodendron",
+    "scientific": "Philodendron hederaceum",
+    "category": "Tropical Foliage",
+    "description": "A beloved houseplant with heart-shaped, glossy leaves. Easy-care and air-purifying.",
+    "care": {
+      "water": "Water when top inch of soil is dry.",
+      "sunlight": "Medium to bright indirect light.",
+      "soil": "Well-draining potting mix.",
+      "fertilizer": "Monthly in spring and summer.",
+      "temperature": "16–29°C (60–85°F)"
+    },
+    "location": "Indoor",
+    "climate": [
+      "Tropical"
+    ],
+    "difficulty": "Easy",
+    "emoji": "🍃",
+    "tags": [
+      "indoor",
+      "tropical",
+      "air-purifying",
+      "trailing"
+    ],
+    "image": "PlantImage/Philodendron.jpg"
+  },
+  {
+    "id": 58,
+    "name": "Water Lily",
+    "scientific": "Nymphaea",
+    "category": "Aquatic",
+    "description": "Beautiful floating aquatic flowers that bloom on the water surface in ponds and lakes.",
+    "care": {
+      "water": "Fully aquatic; grown in still or slow-moving water.",
+      "sunlight": "Full sun, 6+ hours daily.",
+      "soil": "Heavy clay or loam submerged in water.",
+      "fertilizer": "Aquatic plant tablets pushed into the soil.",
+      "temperature": "21–32°C (70–90°F)"
+    },
+    "location": "Pond / Water Garden",
+    "climate": [
+      "Tropical",
+      "Subtropical",
+      "Temperate"
+    ],
+    "difficulty": "Moderate",
+    "emoji": "🪷",
+    "tags": [
+      "aquatic",
+      "flowering",
+      "pond",
+      "ornamental"
+    ],
+    "image": "PlantImage/WaterLily.jpg"
+  },
+  {
+    "id": 59,
+    "name": "Malunggay / Moringa",
+    "scientific": "Moringa oleifera",
+    "category": "Tree",
+    "description": "A miracle tree packed with nutrients. Leaves, pods, and seeds are all edible and medicinal.",
+    "care": {
+      "water": "Drought-tolerant; water during establishment and dry spells.",
+      "sunlight": "Full sun.",
+      "soil": "Well-draining sandy or loamy soil.",
+      "fertilizer": "Minimal; grows in poor soil.",
+      "temperature": "25–35°C (77–95°F)"
+    },
+    "location": "Tropical Outdoor",
+    "climate": [
+      "Tropical"
+    ],
+    "difficulty": "Easy",
+    "emoji": "🌱",
+    "tags": [
+      "tree",
+      "medicinal",
+      "edible",
+      "philippine",
+      "superfood"
+    ],
+    "image": "PlantImage/Malunggay.jpg"
+  },
+  {
+    "id": 60,
+    "name": "Crown of Thorns",
+    "scientific": "Euphorbia milii",
+    "category": "Succulent",
+    "description": "A thorny succulent shrub with tiny, bright flowers. Drought-tolerant and long-blooming.",
+    "care": {
+      "water": "Allow soil to dry between waterings; every 2–3 weeks.",
+      "sunlight": "Full sun to bright indirect light.",
+      "soil": "Sandy, well-draining succulent mix.",
+      "fertilizer": "Monthly with balanced fertilizer during growing season.",
+      "temperature": "18–32°C (65–90°F)"
+    },
+    "location": "Tropical / Subtropical Outdoor or Indoor",
+    "climate": [
+      "Tropical",
+      "Subtropical"
+    ],
+    "difficulty": "Easy",
+    "emoji": "🌻",
+    "tags": [
+      "succulent",
+      "drought-tolerant",
+      "flowering",
+      "outdoor"
+    ],
+    "image": "PlantImage/CrownOfThorns.jpg"
+  }
+]
