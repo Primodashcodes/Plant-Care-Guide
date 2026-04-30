@@ -21,13 +21,25 @@ app.post('/api/identify', async (req, res) => {
     if (!base64 || !mimeType) return res.status(400).json({ error: 'Missing base64 or mimeType' });
     if (!GEMINI_KEY) return res.status(500).json({ error: 'API key not configured on server.' });
 
-    const prompt = `You are an expert botanist and plant identification AI.
-Analyze the provided image carefully and identify the plant.
+    const prompt = `You are an expert botanist and plant health diagnostician.
+Analyze the provided image carefully.
 
-Respond ONLY with a valid JSON object. No markdown, no code fences, no extra text.
+1. Identify the plant species.
+2. Visually assess the plant's current health condition based on what you can see:
+   - Leaf color (yellowing, browning, pale, dark spots)
+   - Leaf texture (wilting, crispy edges, soft/mushy)
+   - Stem condition (leggy, drooping, firm)
+   - Soil moisture (if visible — dry/cracked or wet/soggy)
+   - Pest or disease signs (spots, holes, webs, mold)
+   - Overall appearance vs. a healthy specimen
 
-If a plant is clearly visible, use this format:
-{"found":true,"name":"Common Name","scientific":"Genus species","emoji":"🌿","description":"2-3 sentence description.","water":"Watering care instructions.","sunlight":"Light requirements.","soil":"Soil type needed.","care_tip":"One practical care tip.","interesting_fact":"One interesting fact about this plant."}
+Respond ONLY with valid JSON (no markdown, no extra text):
+
+If a plant is clearly visible:
+{"found":true,"name":"Common Name","scientific":"Genus species","emoji":"🌿","description":"2-3 sentence description.","water":"Watering care instructions.","sunlight":"Light requirements.","soil":"Soil type needed.","care_tip":"One practical care tip.","interesting_fact":"One interesting fact about this plant.","health":["Healthy"],"health_detail":"Detailed observation of what you visually detected in this specific photo — what looks good, what needs attention, and what the owner should do."}
+
+For the "health" array, include ALL conditions you detect from the image. Use ONLY these exact values (can include multiple):
+"Healthy", "Needs Water", "Overwatered", "Needs More Sunlight", "Too Much Sun", "Nutrient Deficiency", "Pest Detected", "Disease Detected", "Wilting", "Root Bound"
 
 If no plant is visible or you cannot identify it:
 {"found":false,"reason":"Brief explanation."}`;
@@ -37,7 +49,7 @@ If no plant is visible or you cannot identify it:
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         contents: [{ parts: [{ text: prompt }, { inline_data: { mime_type: mimeType, data: base64 } }] }],
-        generationConfig: { temperature: 0.1, maxOutputTokens: 1024, responseMimeType: 'text/plain' }
+        generationConfig: { temperature: 0.1, maxOutputTokens: 2048, responseMimeType: 'text/plain' }
       })
     });
 

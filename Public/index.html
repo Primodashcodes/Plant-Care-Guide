@@ -23,6 +23,7 @@
     <nav>
       <button class="nav-btn active" onclick="showPage('browse')">🌱 Browse</button>
       <button class="nav-btn" onclick="showPage('scan')">📷 Identify</button>
+      <button class="nav-btn" onclick="showPage('garden')">🌿 My Garden</button>
       <button class="nav-btn" onclick="showPage('location')">📍 Location</button>
       <button class="nav-btn" onclick="showPage('about')">ℹ️ About</button>
     </nav>
@@ -155,10 +156,18 @@
       <div class="cam-result-card" id="geminiResult">
         <div class="result-header">
           <span class="result-emoji" id="resultEmoji">🌿</span>
-          <div>
+          <div style="flex:1;">
             <div class="result-name" id="resultName"></div>
             <div class="result-scientific" id="resultScientific"></div>
           </div>
+          <button class="audio-btn" id="audioBtn" onclick="speakPlantName()" title="Hear pronunciation">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+              <path d="M19.07 4.93a10 10 0 0 1 0 14.14"/>
+              <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>
+            </svg>
+            <span>Pronounce</span>
+          </button>
         </div>
         <div class="result-body" id="resultBody"></div>
         <div class="db-match-banner" id="dbMatchBanner">
@@ -177,7 +186,85 @@
     </div>
   </div>
 
-  <!-- ===== LOCATION PAGE ===== -->
+  <!-- ===== MY GARDEN PAGE (History + Progress combined) ===== -->
+  <div id="page-garden" class="page">
+    <div class="garden-container">
+
+      <!-- Garden page hero -->
+      <div class="garden-hero">
+        <div class="garden-hero-text">
+          <h2>🌿 My Garden</h2>
+          <p>Track your plants & view identification history</p>
+        </div>
+        <button class="garden-browse-btn" onclick="showPage('browse')">🌱 Browse Plants</button>
+      </div>
+
+      <!-- Tab switcher -->
+      <div class="garden-tabs">
+        <button class="garden-tab" id="tab-progress" onclick="switchGardenTab('progress')">
+          📈 Progress Tracker
+        </button>
+        <button class="garden-tab active" id="tab-history" onclick="switchGardenTab('history')">
+          🕓 Scan History
+        </button>
+      </div>
+
+      <!-- ── HISTORY PANEL ── -->
+      <div id="garden-panel-history" class="garden-panel active">
+        <div class="garden-panel-header">
+          <p class="garden-panel-desc">Every plant you've identified — tap <strong>Track</strong> to add it to your progress tracker.</p>
+          <button class="clear-history-btn" onclick="clearHistory()">🗑 Clear All</button>
+        </div>
+        <div id="historyEmpty" class="history-empty">
+          <div style="font-size:3.5rem">📷</div>
+          <h3>No identifications yet</h3>
+          <p>Go to the Identify tab and scan your first plant!</p>
+        </div>
+        <div id="historyList" class="history-list"></div>
+      </div>
+
+      <!-- ── PROGRESS PANEL ── -->
+      <div id="garden-panel-progress" class="garden-panel">
+        <div class="progress-add-card">
+          <h3>➕ Track a New Plant</h3>
+          <div class="progress-form">
+            <input type="text" id="progressPlantName" placeholder="Plant name" class="progress-input" />
+            <input type="date" id="progressStartDate" class="progress-input" />
+            <textarea id="progressNotes" placeholder="Initial notes (optional)…" class="progress-input progress-textarea"></textarea>
+            <button class="btn-primary" onclick="addProgressPlant()">Add Plant to Tracker</button>
+          </div>
+        </div>
+        <div id="progressEmpty" class="history-empty">
+          <div style="font-size:3.5rem">🌱</div>
+          <h3>No plants tracked yet</h3>
+          <p>Add a plant above, or tap <strong>Track</strong> from Scan History!</p>
+        </div>
+        <div id="progressList" class="progress-list"></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- LOG ENTRY MODAL -->
+  <div class="modal-overlay" id="logModalOverlay" onclick="closeLogModal(event)">
+    <div class="modal" id="logModalContent" style="max-width:460px;">
+      <button class="modal-close" onclick="closeLogModal()">✕</button>
+      <div class="modal-body" style="padding-top:24px;">
+        <h3 style="font-family:'Playfair Display',serif;color:var(--green-deep);margin-bottom:16px;">📝 Add Progress Log</h3>
+        <p style="font-size:0.85rem;color:var(--text-light);margin-bottom:16px;">Plant: <strong id="logPlantLabel"></strong></p>
+        <input type="date" id="logDate" class="progress-input" style="margin-bottom:10px;" />
+        <textarea id="logNote" placeholder="How is the plant doing? Any changes observed?" class="progress-input progress-textarea" style="margin-bottom:10px;"></textarea>
+        <select id="logStatus" class="progress-input" style="margin-bottom:16px;">
+          <option value="Healthy">🟢 Healthy</option>
+          <option value="Growing">🌱 Growing</option>
+          <option value="Flowering">🌸 Flowering</option>
+          <option value="Needs Water">💧 Needs Water</option>
+          <option value="Issue Detected">⚠️ Issue Detected</option>
+        </select>
+        <button class="btn-primary" onclick="saveLogEntry()" style="width:100%;justify-content:center;">Save Entry</button>
+      </div>
+    </div>
+  </div>
   <div id="page-location" class="page">
     <div class="location-container">
       <div class="location-card">
@@ -249,13 +336,42 @@
   </div>
 </main>
 
-<!-- MOBILE BOTTOM NAV -->
+<!-- MOBILE BOTTOM NAV (White style) -->
 <div class="mobile-nav">
   <div class="mobile-nav-inner">
-    <button class="mobile-nav-btn active" onclick="showPage('browse')"><span class="nav-icon">🌱</span>Browse</button>
-    <button class="mobile-nav-btn" onclick="showPage('scan')"><span class="nav-icon">📷</span>Identify</button>
-    <button class="mobile-nav-btn" onclick="showPage('location')"><span class="nav-icon">📍</span>Location</button>
-    <button class="mobile-nav-btn" onclick="showPage('about')"><span class="nav-icon">ℹ️</span>About</button>
+    <!-- Browse -->
+    <button class="mobile-nav-btn active" data-page="browse" onclick="showPage('browse')">
+      <svg class="mnav-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+      <span>Browse</span>
+    </button>
+
+    <!-- My Plants (opens garden page, progress tab) -->
+    <button class="mobile-nav-btn" data-page="progress" onclick="showPage('garden');switchGardenTab('progress')">
+      <svg class="mnav-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M17 8C8 10 5.9 16.17 3.82 19.34L5.71 21l1-1.3A4.49 4.49 0 0 0 8 20c4 0 4-2 8-2s4 2 8 2v-2c-4 0-4-2-8-2a4.49 4.49 0 0 0-1.29.34C15.12 12.87 17 8 17 8z"/></svg>
+      <span>My Plants</span>
+    </button>
+
+    <!-- Center raised camera/scan button -->
+    <div class="mnav-cam-wrap">
+      <button class="mnav-cam-btn" onclick="showPage('scan')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="28" height="28">
+          <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+          <circle cx="12" cy="13" r="4"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Location -->
+    <button class="mobile-nav-btn" data-page="location" onclick="showPage('location')">
+      <svg class="mnav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      <span>Location</span>
+    </button>
+
+    <!-- About -->
+    <button class="mobile-nav-btn" data-page="about" onclick="showPage('about')">
+      <svg class="mnav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+      <span>About</span>
+    </button>
   </div>
 </div>
 

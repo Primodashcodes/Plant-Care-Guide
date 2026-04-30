@@ -1152,37 +1152,81 @@
       bottom: 0;
       left: 0;
       right: 0;
-      background: #fff;
-      border-top: 1px solid var(--green-pale);
-      padding: 10px 0 calc(10px + env(safe-area-inset-bottom));
+      background: #ffffff;
+      border-top: 1px solid #e8f0e9;
+      padding: 0 0 calc(6px + env(safe-area-inset-bottom));
       z-index: 150;
-      box-shadow: 0 -4px 24px rgba(0,0,0,0.08);
+      box-shadow: 0 -2px 16px rgba(0,0,0,0.08);
     }
 
     .mobile-nav-inner {
       display: flex;
+      align-items: flex-end;
       justify-content: space-around;
+      height: 64px;
+      position: relative;
     }
 
+    /* Regular nav buttons */
     .mobile-nav-btn {
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: center;
       gap: 3px;
-      padding: 6px 16px;
+      padding: 8px 10px 4px;
       background: none;
       border: none;
       cursor: pointer;
-      color: var(--text-light);
+      color: #aab5aa;
       font-family: 'DM Sans', sans-serif;
-      font-size: 0.67rem;
+      font-size: 0.6rem;
       font-weight: 600;
       transition: color 0.2s;
+      flex: 1;
+      min-width: 0;
+    }
+    .mobile-nav-btn span { white-space: nowrap; }
+    .mobile-nav-btn.active { color: var(--green-mid); }
+
+    /* SVG icon inside buttons */
+    .mnav-icon {
+      width: 22px;
+      height: 22px;
+      flex-shrink: 0;
     }
 
-    .mobile-nav-btn .nav-icon { font-size: 1.4rem; }
+    /* Centre camera slot */
+    .mnav-cam-wrap {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
 
-    .mobile-nav-btn.active { color: var(--green-mid); }
+    /* Raised green camera circle */
+    .mnav-cam-btn {
+      position: absolute;
+      bottom: 6px;
+      width: 62px;
+      height: 62px;
+      border-radius: 50%;
+      background: var(--green-mid);
+      border: 4px solid #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 4px 18px rgba(45,106,79,0.35);
+      transition: background 0.2s, transform 0.15s;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .mnav-cam-btn:active,
+    .mnav-cam-btn.mnav-cam-active {
+      background: var(--green-deep);
+      transform: scale(0.93);
+    }
 
     @media (max-width: 700px) {
       .mobile-nav { display: block; }
@@ -1622,4 +1666,543 @@
   .cam-ctrl-shutter { width: 70px; height: 70px; }
   .shutter-ring     { width: 70px; height: 70px; }
   .shutter-dot      { width: 53px; height: 53px; }
+}
+
+/* =========================================================
+   NEW FEATURES: Audio, History, Progress
+   ========================================================= */
+
+/* === AUDIO BUTTON (Scan result) === */
+.audio-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--green-pale);
+  color: var(--green-deep);
+  border: 2px solid var(--green-soft);
+  border-radius: 50px;
+  padding: 8px 16px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.audio-btn:hover {
+  background: var(--green-soft);
+  color: #fff;
+}
+.audio-btn.speaking {
+  background: var(--green-mid);
+  color: #fff;
+  animation: pulse-audio 0.8s ease-in-out infinite alternate;
+}
+@keyframes pulse-audio {
+  from { box-shadow: 0 0 0 0 rgba(64,145,108,0.4); }
+  to   { box-shadow: 0 0 0 8px rgba(64,145,108,0); }
+}
+
+/* Small audio button for history/progress names */
+.hist-audio-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 2px 4px;
+  border-radius: 6px;
+  transition: transform 0.15s;
+  vertical-align: middle;
+  margin-left: 4px;
+}
+.hist-audio-btn:hover { transform: scale(1.2); }
+
+/* === HISTORY PAGE === */
+.history-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 4px;
+}
+.history-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.clear-history-btn {
+  background: #fff3cd;
+  border: 2px solid #ffd966;
+  color: #856404;
+  padding: 8px 18px;
+  border-radius: 50px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.clear-history-btn:hover { background: #ffd966; }
+
+.history-empty {
+  text-align: center;
+  padding: 60px 24px;
+  color: var(--text-light);
+}
+.history-empty h3 { margin: 12px 0 6px; font-size: 1.1rem; color: var(--text-mid); }
+.history-empty p  { font-size: 0.88rem; }
+
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.hist-card {
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--card-shadow);
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 16px;
+  position: relative;
+  animation: slideUp 0.3s ease;
+}
+.hist-thumb {
+  width: 72px;
+  height: 72px;
+  border-radius: 12px;
+  object-fit: cover;
+  flex-shrink: 0;
+  background: var(--green-pale);
+}
+.hist-thumb-emoji {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+.hist-body { flex: 1; min-width: 0; }
+.hist-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.05rem;
+  color: var(--green-deep);
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+.hist-scientific {
+  font-size: 0.78rem;
+  font-style: italic;
+  color: var(--text-light);
+  margin-bottom: 4px;
+}
+.hist-date {
+  font-size: 0.75rem;
+  color: var(--text-light);
+  margin-bottom: 6px;
+}
+.hist-snippet {
+  font-size: 0.82rem;
+  color: var(--text-mid);
+  line-height: 1.5;
+}
+.hist-delete-btn {
+  background: none;
+  border: none;
+  color: var(--text-light);
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 6px;
+  transition: color 0.2s, background 0.2s;
+  flex-shrink: 0;
+  align-self: flex-start;
+}
+.hist-delete-btn:hover { background: #ffe0e0; color: var(--danger); }
+
+/* === PROGRESS PAGE === */
+.progress-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.progress-add-card {
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--card-shadow);
+  padding: 24px;
+  margin-bottom: 28px;
+}
+.progress-add-card h3 {
+  font-family: 'Playfair Display', serif;
+  color: var(--green-deep);
+  margin-bottom: 16px;
+  font-size: 1.1rem;
+}
+.progress-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+.progress-form .progress-input {
+  width: 100%;
+}
+.progress-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid var(--green-pale);
+  border-radius: var(--radius-sm);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.92rem;
+  color: var(--text-dark);
+  background: var(--warm-white);
+  transition: border-color 0.2s;
+}
+.progress-input:focus { outline: none; border-color: var(--green-light); }
+.progress-textarea { resize: vertical; min-height: 70px; }
+
+.progress-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.prog-card {
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--card-shadow);
+  padding: 20px;
+  animation: slideUp 0.3s ease;
+}
+.prog-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.prog-plant-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.15rem;
+  color: var(--green-deep);
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.prog-plant-meta {
+  font-size: 0.78rem;
+  color: var(--text-light);
+}
+.prog-status-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+.prog-add-log-btn {
+  background: var(--green-mid);
+  color: #fff;
+  border: none;
+  padding: 7px 16px;
+  border-radius: 50px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.prog-add-log-btn:hover { background: var(--green-deep); }
+.prog-delete-btn {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  color: var(--text-light);
+  padding: 4px 8px;
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+.prog-delete-btn:hover { background: #ffe0e0; color: var(--danger); }
+
+.prog-initial-notes {
+  font-size: 0.83rem;
+  color: var(--text-mid);
+  background: var(--green-pale);
+  border-radius: var(--radius-sm);
+  padding: 8px 12px;
+  margin-bottom: 12px;
+}
+.prog-logs {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 4px;
+}
+.prog-log-entry {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background: var(--cream);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  flex-wrap: wrap;
+}
+.prog-log-status {
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 50px;
+  white-space: nowrap;
+}
+.prog-log-date {
+  font-size: 0.75rem;
+  color: var(--text-light);
+  white-space: nowrap;
+  padding-top: 3px;
+}
+.prog-log-note {
+  font-size: 0.85rem;
+  color: var(--text-mid);
+  flex: 1;
+  line-height: 1.5;
+}
+.prog-no-logs {
+  font-size: 0.83rem;
+  color: var(--text-light);
+  font-style: italic;
+  text-align: center;
+  padding: 12px;
+}
+
+/* Mobile adjustments for new pages */
+@media (max-width: 700px) {
+  .history-container,
+  .progress-container { padding: 0; }
+  .hist-card { padding: 12px; gap: 12px; }
+  .hist-thumb { width: 56px; height: 56px; }
+}
+
+/* === MORE POPUP MENU === */
+.mnav-more-popup {
+  display: none;
+  position: absolute;
+  bottom: 70px;
+  right: 8px;
+  background: #2a2a2e;
+  border-radius: 14px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+  overflow: hidden;
+  z-index: 200;
+  min-width: 160px;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+.mnav-more-popup.open { display: block; animation: slideUp 0.2s ease; }
+.mnav-more-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 14px 18px;
+  background: none;
+  border: none;
+  color: #e0e0e0;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.15s;
+}
+.mnav-more-item:not(:last-child) { border-bottom: 1px solid rgba(255,255,255,0.06); }
+.mnav-more-item:hover { background: rgba(255,255,255,0.08); }
+
+/* =========================================================
+   COMBINED GARDEN PAGE (History + Progress Tabs)
+   ========================================================= */
+.garden-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Tab bar */
+.garden-tabs {
+  display: flex;
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--card-shadow);
+  padding: 6px;
+  margin-bottom: 24px;
+  gap: 6px;
+}
+.garden-tab {
+  flex: 1;
+  padding: 12px 16px;
+  border: none;
+  border-radius: calc(var(--radius) - 4px);
+  background: transparent;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-light);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.garden-tab.active {
+  background: var(--green-mid);
+  color: #fff;
+  box-shadow: 0 2px 10px rgba(45,106,79,0.3);
+}
+.garden-tab:not(.active):hover {
+  background: var(--green-pale);
+  color: var(--green-deep);
+}
+
+/* Panels */
+.garden-panel { display: none; }
+.garden-panel.active { display: block; animation: slideUp 0.25s ease; }
+
+/* Panel header row */
+.garden-panel-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+}
+.garden-panel-desc {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  line-height: 1.5;
+  flex: 1;
+}
+
+/* Track button inside history cards */
+.track-from-hist-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 10px;
+  background: var(--green-pale);
+  color: var(--green-deep);
+  border: 1.5px solid var(--green-soft);
+  border-radius: 50px;
+  padding: 6px 14px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.track-from-hist-btn:hover {
+  background: var(--green-mid);
+  color: #fff;
+  border-color: var(--green-mid);
+}
+
+@media (max-width: 700px) {
+  .garden-container { padding: 0; }
+  .garden-tab { font-size: 0.78rem; padding: 10px 8px; }
+}
+
+/* Garden page hero bar */
+.garden-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 20px;
+  gap: 12px;
+}
+.garden-hero-text h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  color: var(--green-deep);
+  margin: 0 0 4px;
+}
+.garden-hero-text p {
+  font-size: 0.82rem;
+  color: var(--text-light);
+  margin: 0;
+}
+.garden-browse-btn {
+  background: var(--green-pale);
+  color: var(--green-deep);
+  border: 2px solid var(--green-soft);
+  border-radius: 50px;
+  padding: 9px 18px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+.garden-browse-btn:hover {
+  background: var(--green-mid);
+  color: #fff;
+  border-color: var(--green-mid);
+}
+
+/* =========================================================
+   PLANT HEALTH STATUS (Gemini visual diagnosis)
+   ========================================================= */
+.health-status-row {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 14px;
+  padding: 14px;
+  background: var(--green-pale);
+  border-radius: var(--radius-sm);
+  border-left: 4px solid var(--green-mid);
+}
+.health-status-row strong {
+  font-size: 0.85rem;
+  color: var(--green-deep);
+}
+.health-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 4px;
+}
+.health-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 5px 12px;
+  border-radius: 50px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  font-family: 'DM Sans', sans-serif;
+}
+.health-detail-box {
+  font-size: 0.82rem;
+  color: var(--text-mid);
+  line-height: 1.6;
+  margin-top: 6px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(0,0,0,0.06);
+}
+
+/* Mini health tags in history cards */
+.hist-health-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin: 6px 0;
+}
+.hist-health-tag {
+  background: var(--green-pale);
+  color: var(--green-deep);
+  border-radius: 50px;
+  padding: 3px 10px;
+  font-size: 0.7rem;
+  font-weight: 600;
 }
