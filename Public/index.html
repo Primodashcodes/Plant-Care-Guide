@@ -130,13 +130,13 @@
       <!-- Bottom controls: gallery | shutter | flip -->
       <div class="cam-controls">
         <!-- Gallery / upload -->
-        <button class="cam-ctrl cam-ctrl-gallery" onclick="document.getElementById('fileInput').click()" title="Upload from gallery">
+        <label class="cam-ctrl cam-ctrl-gallery" for="fileInput" title="Upload from gallery">
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/>
             <polyline points="21 15 16 10 5 21"/>
           </svg>
-        </button>
-        <input type="file" id="fileInput" accept="image/*" onchange="handleFileUpload(event)" style="display:none;" />
+        </label>
+        <input type="file" id="fileInput" accept="image/*" onchange="handleFileUpload(event)" style="position:absolute;width:1px;height:1px;opacity:0;pointer-events:none;" />
 
         <!-- Shutter -->
         <button class="cam-ctrl cam-ctrl-shutter" id="shutterBtn" onclick="shutterPress()" title="Snap / Open Camera">
@@ -197,51 +197,59 @@
         </div>
       </div>
 
-      <!-- Tab switcher -->
-      <div class="garden-tabs">
-        <button class="garden-tab" id="tab-progress" onclick="switchGardenTab('progress')">
-          📈 Progress Tracker
-        </button>
-        <button class="garden-tab active" id="tab-history" onclick="switchGardenTab('history')">
-          🕓 Scan History
-        </button>
-      </div>
+      <!-- Single merged card -->
+      <div class="garden-card">
 
-      <!-- ── HISTORY PANEL ── -->
-      <div id="garden-panel-history" class="garden-panel active">
-        <div class="garden-panel-header">
-          <p class="garden-panel-desc">Every plant you've identified — tap <strong>Track</strong> to add it to your progress tracker.</p>
-          <button class="clear-history-btn" onclick="clearHistory()">🗑 Clear All</button>
+        <!-- Tab switcher -->
+        <div class="garden-tabs">
+          <button class="garden-tab" id="tab-progress" onclick="switchGardenTab('progress')">
+            📈 Progress Tracker
+          </button>
+          <button class="garden-tab active" id="tab-history" onclick="switchGardenTab('history')">
+            🕓 Scan History
+          </button>
         </div>
-        <div id="historyEmpty" class="history-empty">
-          <div style="font-size:3.5rem">📷</div>
-          <h3>No identifications yet</h3>
-          <p>Go to the Identify tab and scan your first plant!</p>
-        </div>
-        <div id="historyList" class="history-list"></div>
-      </div>
 
-      <!-- ── PROGRESS PANEL ── -->
-      <div id="garden-panel-progress" class="garden-panel">
-        <div class="progress-add-card">
-          <h3>➕ Track a New Plant</h3>
-          <div class="progress-form">
-            <input type="text" id="progressPlantName" placeholder="Plant name" class="progress-input" />
-            <input type="date" id="progressStartDate" class="progress-input" />
-            <textarea id="progressNotes" placeholder="Initial notes (optional)…" class="progress-input progress-textarea"></textarea>
-            <button class="btn-primary" onclick="addProgressPlant()">Add Plant to Tracker</button>
+        <!-- ── HISTORY PANEL ── -->
+        <div id="garden-panel-history" class="garden-panel active">
+          <div class="garden-panel-header">
+            <div style="flex:1;"></div>
+            <button class="clear-history-btn" onclick="clearHistory()">🗑 Clear All</button>
+          </div>
+          <div style="padding: 0 16px 16px;">
+            <div id="historyEmpty" class="history-empty">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#a8c5a8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:10px;"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+              <h3>No identifications yet</h3>
+              <p>Go to the Identify tab and scan your first plant!</p>
+            </div>
+            <div id="historyList" class="history-list"></div>
           </div>
         </div>
-        <div id="progressEmpty" class="history-empty">
-          <div style="font-size:3.5rem">🌱</div>
-          <h3>No plants tracked yet</h3>
-          <p>Add a plant above, or tap <strong>Track</strong> from Scan History!</p>
-        </div>
-        <div id="progressList" class="progress-list"></div>
-      </div>
 
-    </div>
-  </div>
+        <!-- ── PROGRESS PANEL ── -->
+        <div id="garden-panel-progress" class="garden-panel">
+          <div style="padding: 16px;">
+            <div class="progress-add-card">
+              <h3>➕ Track a New Plant</h3>
+              <div class="progress-form">
+                <input type="text" id="progressPlantName" placeholder="Plant name" class="progress-input" />
+                <input type="date" id="progressStartDate" class="progress-input" />
+                <textarea id="progressNotes" placeholder="Initial notes (optional)…" class="progress-input progress-textarea"></textarea>
+                <button class="btn-primary" onclick="addProgressPlant()">Add Plant to Tracker</button>
+              </div>
+            </div>
+            <div id="progressEmpty" class="history-empty">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#a8c5a8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:10px;"><path d="M12 2a10 10 0 0 1 0 20"/><path d="M12 2C6.48 2 2 6.48 2 12"/><path d="M12 6v6l4 2"/></svg>
+              <h3>No plants tracked yet</h3>
+              <p>Add a plant above, or tap <strong>Track</strong> from Scan History!</p>
+            </div>
+            <div id="progressList" class="progress-list"></div>
+          </div>
+        </div>
+
+      </div>
+    </div><!-- end garden-container -->
+  </div><!-- end page-garden -->
 
   <!-- LOG ENTRY MODAL -->
   <div class="modal-overlay" id="logModalOverlay" onclick="closeLogModal(event)">
@@ -320,7 +328,8 @@
       </div>
       <div class="about-card">
         <h2>👥 Project Team</h2>
-        <p><strong>Team Name:</strong> Plant Care Guide | <strong>Program:</strong> BSIT-2D</p>
+        <p><strong>Team Name:</strong> Plant Care Guide</p>
+        <p><strong>Program:</strong> BSIT-2D</p>
         <div class="team-grid">
           <div class="team-member">
             <div class="team-avatar">👑</div>

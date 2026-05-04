@@ -287,7 +287,10 @@ function handleFileUpload(e) {
     callGemini(capturedB64, mime);
   };
   reader.readAsDataURL(file);
-  e.target.value = '';
+  // Reset input properly on mobile (clone trick)
+  const input = e.target;
+  input.value = '';
+  try { input.value = null; } catch(ex) {}
 }
 
 // =========================================================
